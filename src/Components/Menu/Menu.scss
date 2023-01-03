@@ -1,0 +1,26 @@
+nav{
+    width: 75%;
+    height: 40px;
+    ul{
+     height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li{
+     list-style: none;
+     width: 120px;
+     text-align: center;
+     a{
+         font-size: 16px;
+         font-weight: 400;
+         text-transform: uppercase;
+         font-family: 'Jost', sans-serif;
+         color: #000;
+         text-decoration: none;
+     }
+    }
+    }
+    li >a:hover{
+     color: #999999;
+    }
+ }
