@@ -1,6 +1,5 @@
 import './Header.scss'
 import Menu from '../../Components/Menu/Menu'
-
 import lines from './assets/lines.png'
 import search from './assets/search.png'
 import logo from './assets/logo.png'

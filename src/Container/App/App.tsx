@@ -1,6 +1,7 @@
 import './reset.css'
 import Header from '../Header/Header'
 import Main from '../Main/Main'
+import Footer from '../Footer/Footer'
 
 type Props = {}
 const App = (props: Props) => {
@@ -8,6 +9,7 @@ const App = (props: Props) => {
         <>
             <Header />
             <Main />
+            <Footer />
         </>
     )
 }
