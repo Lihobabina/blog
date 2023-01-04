@@ -1,6 +1,7 @@
 import Articles from '../Articles/Articles'
 import articlesArray from '../../../utils/articlesArray'
 import './ArticlesList.scss'
+import TravelTips from '../TravelTips/TravelTips'
 type ArticleProps = {
     img: string
     category: string
@@ -33,6 +34,7 @@ const ArticlesList = (props: Props) => {
                     )
                 )}
             </div>
+            <TravelTips />
         </>
     )
 }

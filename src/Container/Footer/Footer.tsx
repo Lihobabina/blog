@@ -1,9 +1,11 @@
 import './Footer.scss'
+import SignUp from './SignUp/SignUp'
 import logo from './assets/logo-white.png'
 type Props = {}
 const Footer = (props: Props) => {
     return (
         <>
+            <SignUp />
             <footer>
                 <div className="footer-cont">
                     <div className="col1">

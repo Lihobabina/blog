@@ -6,9 +6,11 @@ const SignUp = (props: Props) => {
             <header>Newsletter</header>
             <div className="box">
                 <div className="content">
-                    <input type="text" placeholder="Your Name" />
-                    <input type="text" placeholder="Your Email" />
-                    <button>Sign Up</button>
+                    <div className="container">
+                        <input type="text" placeholder="Your Name" />
+                        <input type="text" placeholder="Your Email" />
+                        <button>Sign Up</button>
+                    </div>
                 </div>
             </div>
         </>
