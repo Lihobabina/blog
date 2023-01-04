@@ -3,9 +3,7 @@ type Props = {}
 const TravelTips = (props: Props) => {
     return (
         <>
-            <div className="header">
-                <h1>Travel tips</h1>
-            </div>
+            <header>Travel tips</header>
             <div className="tips">
                 <div className="m-tip">
                     <div className="img">
@@ -22,6 +20,7 @@ const TravelTips = (props: Props) => {
                             melius gubergren, has latines .
                         </p>
                     </div>
+                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -35,6 +34,7 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
+                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -48,6 +48,7 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
+                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -61,6 +62,7 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
+                    <button className="like"></button>
                 </div>
             </div>
         </>

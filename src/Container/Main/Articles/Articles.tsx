@@ -20,6 +20,7 @@ const Articles = ({ img, category, desc, authorImg, author }: Props) => {
                         {author}
                     </h3>
                 </div>
+                <button className="like"></button>
             </article>
         </>
     )

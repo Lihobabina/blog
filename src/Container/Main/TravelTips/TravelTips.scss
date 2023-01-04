@@ -1,40 +1,31 @@
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    h1{
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 17px;
-        letter-spacing: 3px;
-        font-family: 'Jost',sans-serif;
-        margin-bottom: 10px;
-    }
-   
+@import '/src/Container/App/VariablesSCSS/variables.scss';
+header{
+    @include headers;  
 }
 .tips{
     width: 100%;
-     display: flex;
-    justify-content: space-between;
-     align-items: center;
+     @include display-flex-between;
      flex-wrap: wrap;
      .m-tip{
+        position: relative;
+        padding-bottom: 15px;
         width: 100%;
         margin-bottom: 25px;
-       
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
     .s-tip{
+        position: relative;
+        padding-bottom: 15px;
         width: 30%;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         .img{
-            img{
+             img{
                 height: 180px;
             }
         }
     }
     .img{
+        position: relative;
         width: 100%;
         margin-bottom: 15px;
         img{
@@ -44,13 +35,8 @@
     .content{
         text-align: center;
         h1{
-            color: #111111;
-            font-family: 'Jost',sans-serif;
-            font-size: 23px;
-        font-weight: 700;
-        font-style: normal;
-        text-decoration: none;
-        margin-bottom: 10px;
+            @include headers;
+            margin-bottom: 10px;
         }
         h3{
             font-family: 'Jost',sans-serif;
@@ -62,12 +48,22 @@
                 margin-bottom: 10px;
         }
         p{
-            text-align: center;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 17px;
-            letter-spacing: 1px;
-            font-family: 'Jost',sans-serif;
+            @include description;
+            margin-bottom: 10px;
         }
     }
+    .like{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        border: none;
+        background: none;
+        background-image: url(./like.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+       }
     }

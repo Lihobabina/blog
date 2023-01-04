@@ -1,23 +1,10 @@
+@import '/src/Container/App/VariablesSCSS/variables.scss';
 .header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 30px;
-    h1{
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 17px;
-        letter-spacing: 3px;
-        font-family: 'Jost',sans-serif;
-        margin-bottom: 10px;
-    }
-   
+   @include headers;
 }
 .articles{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex-between;
     flex-wrap: wrap;
+    gap: 25px;
 }

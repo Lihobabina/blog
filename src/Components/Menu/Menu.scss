@@ -1,21 +1,17 @@
+@import '/src/Container/App/VariablesSCSS/variables.scss';
 nav{
     width: 75%;
     height: 40px;
     ul{
      height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+     @include display-flex-between;
     li{
      list-style: none;
      width: 120px;
      text-align: center;
      a{
-         font-size: 16px;
-         font-weight: 400;
          text-transform: uppercase;
-         font-family: 'Jost', sans-serif;
-         color: #000;
+         @include description;
          text-decoration: none;
      }
     }

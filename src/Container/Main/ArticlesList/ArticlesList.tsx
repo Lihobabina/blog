@@ -12,9 +12,7 @@ type Props = {}
 const ArticlesList = (props: Props) => {
     return (
         <>
-            <div className="header">
-                <h1>Articles</h1>
-            </div>
+            <header>Articles</header>
 
             <div className="articles">
                 {articlesArray.map(
