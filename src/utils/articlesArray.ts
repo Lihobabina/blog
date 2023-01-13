@@ -29,21 +29,21 @@ const articlesArray: ArticleProps[] = [
 },
 {
     img:  "/ArticleImages/4.jpg",
-    category:"photography",
+    category:"destinations",
     desc: "Eu cum Nibh everti vivendo ius ne",
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" 
 },
 {
     img:  "/ArticleImages/5.jpg",
-    category:"detinations",
+    category:"photography",
     desc: "Eu cum Nibh everti vivendo ius ne",
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" 
 },
 {
     img:  "/ArticleImages/6.jpg",
-    category:"photography",
+    category:"destinations",
     desc: "Eu cum Nibh everti vivendo ius ne",
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" 
@@ -57,7 +57,7 @@ const articlesArray: ArticleProps[] = [
 },
 {
     img:  "/ArticleImages/8.jpg",
-    category:"photography",
+    category:"destinations",
     desc: "Eu cum Nibh everti vivendo ius ne",
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" 
@@ -65,6 +65,27 @@ const articlesArray: ArticleProps[] = [
 {
     img:  "/ArticleImages/9.jpg",
     category:"photography",
+    desc: "Eu cum Nibh everti vivendo ius ne",
+    authorImg:'/ArticleImages/author-1.jpg',
+    author:"Claire Payne" 
+},
+{
+    img:  "/ArticleImages/9.jpg",
+    category:"culture",
+    desc: "Eu cum Nibh everti vivendo ius ne",
+    authorImg:'/ArticleImages/author-1.jpg',
+    author:"Claire Payne" 
+},
+{
+    img:  "/ArticleImages/9.jpg",
+    category:"photography",
+    desc: "Eu cum Nibh everti vivendo ius ne",
+    authorImg:'/ArticleImages/author-1.jpg',
+    author:"Claire Payne" 
+},
+{
+    img:  "/ArticleImages/9.jpg",
+    category:"culture",
     desc: "Eu cum Nibh everti vivendo ius ne",
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" 
