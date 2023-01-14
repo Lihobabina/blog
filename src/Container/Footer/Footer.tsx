@@ -1,11 +1,13 @@
 import './Footer.scss'
 import SignUp from './SignUp/SignUp'
 import logo from './assets/logo-white.png'
+import MenuItem from '../../Components/Menu/MenuItem'
 type Props = {}
 const Footer = (props: Props) => {
     return (
         <>
             <SignUp />
+
             <footer>
                 <div className="footer-cont">
                     <div className="col1">
@@ -17,19 +19,13 @@ const Footer = (props: Props) => {
                     </div>
                     <div className="col2">
                         <h2>Categories</h2>
+
                         <ul>
-                            <li>
-                                <a href=".">Destinations</a>
-                            </li>
-                            <li>
-                                <a href=".">Photography</a>
-                            </li>
-                            <li>
-                                <a href=".">Culture</a>
-                            </li>
-                            <li>
-                                <a href=".">Liked</a>
-                            </li>
+                            <MenuItem to="/">Home</MenuItem>
+                            <MenuItem to="/Destinations">Destinations</MenuItem>
+                            <MenuItem to="/Photography">Photography</MenuItem>
+                            <MenuItem to="/Culture">Culture</MenuItem>
+                            <MenuItem to="/Liked">Liked</MenuItem>
                         </ul>
                     </div>
                     <div className="col3">

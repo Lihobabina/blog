@@ -1,0 +1,32 @@
+@import '/src/Container/App/VariablesSCSS/variables.scss';
+.articles{
+    width: 100%;
+    @include display-flex-center;
+    .article{
+        width: 40%;
+        @include display-flex-center;
+        flex-direction: column;
+        .photo{
+            width: 100%;
+            margin-bottom: 15px;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            width: 100%;
+            @include content;
+            @include author;
+        }
+    }
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -17,8 +17,6 @@ const Slider = (props: Props) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             slidesPerView={1}
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
         >
             <SwiperSlide className="slide">
                 <img src="Slides/1.jpg" alt="" />

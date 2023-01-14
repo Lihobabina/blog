@@ -1,0 +1,39 @@
+@import '/src/Container/App/VariablesSCSS/variables.scss';
+
+    .articles-culture{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        .article{
+            width: 48%;
+            @include display-flex-between;
+            flex-direction: column;
+            .photo{
+                width: 100%;
+                height: 240px;
+                margin-bottom: 15px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .content{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                @include content;
+                @include author;
+                h1{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+    }}
+    

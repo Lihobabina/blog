@@ -32,7 +32,6 @@
             }
             .author{
                 @include display-flex-center;
-                width: 150px;
                 height: 32px;
                 margin-bottom: 10px;
                 .authorImg{
