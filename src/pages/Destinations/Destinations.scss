@@ -1,0 +1,77 @@
+@import '/src/Container/App/VariablesSCSS/variables.scss';
+
+.articles{
+    width: 100%;
+    .article{
+        width: 75%;
+        height: 240px;
+        @include display-flex-between;
+        .photo{
+            width: 360px;
+            height: 240px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .content{
+            width: 416px;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            h1{
+                @include headers;
+                font-size: 20px;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+            .desc{
+                @include display-flex-between;
+                width: 55%;
+                font-size: 12px;
+                font-style: normal;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: 'Jost',sans-serif;
+                margin-bottom: 15px;
+                h2{
+                    color: #999999; 
+                }
+a{
+    text-decoration: none;
+    color: #000;
+
+}
+            }
+            p{
+                @include description;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+            .author{
+                @include display-flex-center;
+                justify-content: start;
+                width: 150px;
+                height: 32px;
+                margin-bottom: 10px;
+                .authorImg{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                margin-right: 5px;}
+                    h3{
+                    font-family: 'Jost',sans-serif;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    span{
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+}

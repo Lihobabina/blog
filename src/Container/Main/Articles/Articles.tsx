@@ -10,7 +10,9 @@ const Articles = ({ img, category, desc, authorImg, author }: Props) => {
     return (
         <>
             <article>
-                <img src={img} alt="" className="photo" />
+                <div className="photo">
+                    <img src={img} alt="" className="photo" />
+                </div>
                 <a href=".">{category}</a>
                 <p>{desc}</p>
                 <div className="author">
