@@ -59,6 +59,7 @@ const Destinations = (props: Props) => {
                         )}
                 </div>
                 <aside>
+                    <h1>Latest pins</h1>
                     <a href="https://www.pinterest.com/pin/your-ticket-to-europes-hottest-foodie-destinations--497155246371701440/">
                         <img src="CultureImages/1.jpg" alt="" />
                     </a>
@@ -77,7 +78,10 @@ const Destinations = (props: Props) => {
                     <a href="https://www.pinterest.com/pin/497155246371468524/">
                         <img src="CultureImages/6.jpg" alt="" />
                     </a>
-                    <button>Follow us</button>
+                    <button>
+                        {' '}
+                        <a href="https://www.pinterest.com/">Follow us</a>
+                    </button>
                 </aside>
             </div>
         </>

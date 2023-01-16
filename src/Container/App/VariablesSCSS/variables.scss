@@ -28,7 +28,7 @@ align-items: center;
 @mixin author{
     .author{
         @include display-flex-center;
-        justify-content: start;
+        justify-content: flex-start;
         height: 32px;
         margin-bottom: 10px;
         .authorImg{
