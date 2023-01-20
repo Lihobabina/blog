@@ -10,8 +10,12 @@ import pinterest from './assets/pinterest.png'
 import youtube from './assets/youtube.png'
 import email from './assets/email.png'
 
-type Props = {}
-const Header = (props: Props) => {
+type Props = {
+    productsInLiked: {
+        [id: number]: boolean
+    }
+}
+const Header = ({ productsInLiked }: Props) => {
     return (
         <>
             <header>
@@ -53,7 +57,7 @@ const Header = (props: Props) => {
                         </div>
                     </div>
                     <div className="row2">
-                        <Menu />
+                        <Menu productsInLiked={productsInLiked} />
                     </div>
                 </div>
             </header>

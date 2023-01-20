@@ -1,5 +1,9 @@
-type Props = {}
-const Liked = (props: Props) => {
-    return <div>Liked</div>
+type Props = {
+    productsInLiked: {
+        [id: number]: boolean
+    }
+}
+const Liked = ({ productsInLiked }: Props) => {
+    return <>Liked</>
 }
 export default Liked

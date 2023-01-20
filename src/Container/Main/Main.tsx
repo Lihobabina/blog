@@ -5,14 +5,37 @@ import Destinations from '../../pages/Destinations/Destinations'
 import Photography from '../../pages/Photography/Photography'
 import Culture from '../../pages/Culture/Culture'
 import Liked from '../../pages/Liked/Liked'
-type Props = {}
-const Main = (props: Props) => {
+
+type Props = {
+    removeProductFromCart: (id: number) => void
+    addProductsToLiked: (id: number) => void
+    productsInLiked: productsInLiked
+}
+type productsInLiked = {
+    [id: number]: boolean
+}
+const Main = ({
+    addProductsToLiked,
+    productsInLiked,
+    removeProductFromCart,
+}: Props) => {
     return (
         <>
             <main>
                 <div className="container">
                     <Routes>
-                        <Route path="/" element={<Home />}></Route>
+                        <Route
+                            path="/"
+                            element={
+                                <Home
+                                    addProductsToLiked={addProductsToLiked}
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
+                        ></Route>
                         <Route
                             path="/Destinations"
                             element={<Destinations />}
@@ -22,7 +45,12 @@ const Main = (props: Props) => {
                             element={<Photography />}
                         ></Route>
                         <Route path="/Culture" element={<Culture />}></Route>
-                        <Route path="/Liked" element={<Liked />}></Route>
+                        <Route
+                            path="/Liked"
+                            element={
+                                <Liked productsInLiked={productsInLiked} />
+                            }
+                        ></Route>
                     </Routes>
                 </div>
             </main>

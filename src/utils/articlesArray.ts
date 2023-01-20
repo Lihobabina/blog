@@ -1,4 +1,5 @@
-type ArticleProps = {
+export type ArticleProps = {
+    id: number
     img: string
     category:string
     desc: string
@@ -8,8 +9,9 @@ type ArticleProps = {
     date: string
     popular?:string
 }
-const articlesArray: ArticleProps[] = [
+ const articlesArray: ArticleProps[] = [
     {
+        id: 1,
         img:  "/ArticleImages/1.jpg",
         category:"culture",
         desc: "Rerum aperiam molestias, dolorum vel soluta",
@@ -20,6 +22,7 @@ const articlesArray: ArticleProps[] = [
         
     },
 {
+    id: 2,
     img:  "/ArticleImages/2.jpg",
     category:"destinations",
     desc: "Amet aeterno gubergren ne per illum tincidunt",
@@ -29,6 +32,7 @@ const articlesArray: ArticleProps[] = [
     date:'December 11, 2019'
 },
 {
+    id: 3,
     img:  "/ArticleImages/3.jpg",
     category:"photography",
     desc: "Rerum aperiam molestias, dolorum vel soluta",
@@ -39,6 +43,7 @@ const articlesArray: ArticleProps[] = [
     popular:''
 },
 {
+    id: 4,
     img:  "/ArticleImages/4.jpg",
     category:"destinations",
     desc: "An quas disputationi mea Legere libris scripta",
@@ -48,6 +53,7 @@ const articlesArray: ArticleProps[] = [
     date:'November 4, 2019',
 },
 {
+    id: 5,
     img:  "/ArticleImages/5.jpg",
     category:"photography",
     desc: "Amet aeterno gubergren ne per illum tincidunte",
@@ -58,6 +64,7 @@ const articlesArray: ArticleProps[] = [
 
 },
 {
+    id: 6,
     img:  "/ArticleImages/6.jpg",
     category:"destinations",
     desc: "Eu cum Nibh everti vivendo ius ne",
@@ -68,6 +75,7 @@ const articlesArray: ArticleProps[] = [
     popular:''
 },
 {
+    id: 7,
     img:  "/ArticleImages/7.jpg",
     category:"culture",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
@@ -78,6 +86,7 @@ const articlesArray: ArticleProps[] = [
     popular:''
 },
 {
+    id: 8,
     img:  "/ArticleImages/8.jpg",
     category:"destinations",
     desc: "Amet aeterno gubergren ne per illum tincidunte",
@@ -87,6 +96,7 @@ const articlesArray: ArticleProps[] = [
     date:"December 18, 2017 "
 },
 {
+    id: 9,
     img:  "/ArticleImages/9.jpg",
     category:"photography",
     desc: "Eu cum Nibh everti vivendo ius ne",
@@ -96,6 +106,7 @@ const articlesArray: ArticleProps[] = [
     date:'December 11, 2019'
 },
 {
+    id: 10,
     img:  "/ArticleImages/2.jpg",
     category:"culture",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
@@ -105,6 +116,7 @@ const articlesArray: ArticleProps[] = [
     date:'December 11, 2019'
 },
 {
+    id: 11,
     img:  "/ArticleImages/4.jpg",
     category:"photography",
     desc: "Eu cum Nibh everti vivendo ius ne",
@@ -114,6 +126,7 @@ const articlesArray: ArticleProps[] = [
     date:'December 11, 2019'
 },
 {
+    id: 12,
     img:  "/ArticleImages/6.jpg",
     category:"culture",
     desc: "Laboriosam error temporibus architecto facere eius illo optio quas amet non porr",
@@ -124,4 +137,8 @@ const articlesArray: ArticleProps[] = [
 },
 
 ]
+export const getProductsObject = (array:ArticleProps[])=>array.reduce((object, product)=>({
+    ...object,
+    [product.id]:product
+}),{})
 export default articlesArray

@@ -2,6 +2,7 @@
 nav{
     width: 75%;
     height: 40px;
+    position: relative;
     ul{
      height: 40px;
      @include display-flex-between;
@@ -9,6 +10,19 @@ nav{
      list-style: none;
      width: 120px;
      text-align: center;
+     .liked-quantity-bl{
+        background-color: #000;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        @include display-flex-center;
+        text-align: center;
+        font-size: 15px;
+        color: #fff;
+        position: absolute;
+        bottom: 17px;
+        right: 15px;
+     }
      a{
          text-transform: uppercase;
          @include description;
