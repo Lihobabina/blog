@@ -20,7 +20,6 @@ const TravelTips = (props: Props) => {
                             melius gubergren, has latines .
                         </p>
                     </div>
-                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -34,7 +33,6 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
-                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -48,7 +46,6 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
-                    <button className="like"></button>
                 </div>
                 <div className="s-tip">
                     <div className="img">
@@ -62,7 +59,6 @@ const TravelTips = (props: Props) => {
                             his, cu sea soluta melius gubergren, has latine .
                         </p>
                     </div>
-                    <button className="like"></button>
                 </div>
             </div>
         </>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Articles.scss'
 type Props = {
     id: number
@@ -44,8 +45,10 @@ const Articles = ({
                         )}
                     </div>
                 </div>
-                <a href=".">{category}</a>
-                <p>{desc}</p>
+                <a href=".">{category}</a>{' '}
+                <Link to={`/articles/${id}`} className="navLink">
+                    {desc}
+                </Link>{' '}
                 <div className="author">
                     <img src={authorImg} alt="" className="authorImg" />
                     <h3>

@@ -8,6 +8,7 @@ export type ArticleProps = {
     text: string
     date: string
     popular?:string
+    articleText: string
 }
  const articlesArray: ArticleProps[] = [
     {
@@ -19,7 +20,7 @@ export type ArticleProps = {
         author:"Claire Payne",
         text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
         date:'December 11, 2019',
-        
+        articleText:'Expetendis complectitur at vix, lorem quaeque apeirian Adhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an. te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
     },
 {
     id: 2,
@@ -29,7 +30,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-2.jpg',
     author:"Lucas ",
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
-    date:'December 11, 2019'
+    date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.icus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 3,
@@ -40,7 +42,8 @@ export type ArticleProps = {
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
     date:'December 11, 2019',
-    popular:''
+    popular:'',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillaeAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an. inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 4,
@@ -51,6 +54,7 @@ export type ArticleProps = {
     author:"Claire Payne" ,
     text:'Quo natum nemore putant in, his te case habemus. Nulla detraxit explicari in vim. Id eam magna omnesque. Per cu dicat urbanitas,',
     date:'November 4, 2019',
+    articleText:'ExpetendiAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.s complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 5,
@@ -61,6 +65,7 @@ export type ArticleProps = {
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
     date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. MeiAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an. ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 
 },
 {
@@ -72,7 +77,8 @@ export type ArticleProps = {
     author:"Lucas ",
     text:"Patrioque assentior ea vim. Volutpat salutandi ex his, cu sea soluta melius gubergren, has latine reprehendunt ea. Has appetere electram persequeris eu.",
     date:'May 25, 2019',
-    popular:''
+    popular:'',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.ae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 7,
@@ -83,7 +89,8 @@ export type ArticleProps = {
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
     date:'December 11, 2019',
-    popular:''
+    popular:'',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei anciAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.llae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 8,
@@ -93,7 +100,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-2.jpg',
     author:"Lucas ",
     text:'Ius ea rebum nostrum offendit. Per in recusabo facilisis, est ei choro veritus gloriatur. Has ut dicant fuisset percipit. At usu iusto',
-    date:"December 18, 2017 "
+    date:"December 18, 2017 ",
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritateAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.m est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 9,
@@ -103,7 +111,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
-    date:'December 11, 2019'
+    date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. MeiAdhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an. ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 10,
@@ -113,7 +122,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
-    date:'December 11, 2019'
+    date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 11,
@@ -123,7 +133,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-2.jpg',
     author:"Lucas ",
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
-    date:'December 11, 2019'
+    date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl invidunt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, Adhuc euripidis no qui. Eam et liber concludaturque, feugiat assentior posidonium pri ut. Case justo ut est, ex dolores aliquando vix. Minimum ocurreret constituam id sea, ignota iisque epicuri sed ne. Ne nec quem feugiat, ad ius iisque commodo efficiantur, his enim illud quodsi an.utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 {
     id: 12,
@@ -133,7 +144,8 @@ export type ArticleProps = {
     authorImg:'/ArticleImages/author-1.jpg',
     author:"Claire Payne" ,
     text:"Labore nonumes te vel, vis id errem tantas tempor. Solet quidam salutatus at quo. Tantas comprehensam te sea, usu sanctus similique ei",
-    date:'December 11, 2019'
+    date:'December 11, 2019',
+    articleText:'Expetendis complectitur at vix, lorem quaeque apeirian te sea, vel te civibus officiis disputationi. Appellantur mediocritatem est id. Pro te nisl inviduvnt voluptatibus. Aperiam mediocrem sea ex, te mea legere timeam vituperatoribus. Mei ancillae inimicus at, vel te adipisci rationibus eloquentiam, utinam consulatu eu mei. Cu usu duis semper aperiam.'
 },
 
 ]

@@ -1,5 +1,4 @@
 @import '/src/Container/App/VariablesSCSS/variables.scss';
-
     article{ 
         width: 30%;
         height: 350px;
@@ -11,7 +10,7 @@
                 height: 218px;
                 margin-bottom: 10px;
                 position: relative;
-                .like, .liked{
+                .liked{
                     width: 50px;
                     height: 35px;
                     position: absolute;
@@ -19,7 +18,7 @@
                     right: 10px;
                     background: none;
                     background-color: rgba($color: #fff, $alpha: 0.5);
-                    background-image: url(./assets/like.png);
+                    background-image: url(./assets/liked.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: 70%;
@@ -27,9 +26,7 @@
                     border-radius: 20%;
                     cursor: pointer;
                    }
-                   .liked{
-                    background-image: url(./assets/liked.png);
-                   }
+                 
                }
             a{
                 font-family: 'Jost',sans-serif;
@@ -41,7 +38,7 @@
             text-decoration: none;
             margin-bottom: 10px;
             }
-            .navLink{
+            p{
                 width: 100%;
                 text-align: center;
                 font-weight: 700;
@@ -49,7 +46,6 @@
                 letter-spacing: 3px;
                 font-family: 'Jost',sans-serif;
                 margin-bottom: 10px;
-                color: #000;
             }
             .author{
                 @include display-flex-center;
@@ -74,4 +70,3 @@
             
        }
     
-       
