@@ -5,24 +5,97 @@ import Destinations from '../../pages/Destinations/Destinations'
 import Photography from '../../pages/Photography/Photography'
 import Culture from '../../pages/Culture/Culture'
 import Liked from '../../pages/Liked/Liked'
-type Props = {}
-const Main = (props: Props) => {
+import ArticlePage from '../../pages/ArticlePage/ArticlePage'
+
+type Props = {
+    removeProductFromCart: (id: number) => void
+    addProductsToLiked: (id: number) => void
+    productsInLiked: productsInLiked
+}
+type productsInLiked = {
+    [id: number]: boolean
+}
+const Main = ({
+    addProductsToLiked,
+    productsInLiked,
+    removeProductFromCart,
+}: Props) => {
     return (
         <>
             <main>
                 <div className="container">
                     <Routes>
-                        <Route path="/" element={<Home />}></Route>
+                        <Route
+                            path="/"
+                            element={
+                                <Home
+                                    addProductsToLiked={addProductsToLiked}
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
+                        ></Route>
                         <Route
                             path="/Destinations"
-                            element={<Destinations />}
+                            element={
+                                <Destinations
+                                    addProductsToLiked={addProductsToLiked}
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
                         ></Route>
                         <Route
                             path="/Photography"
-                            element={<Photography />}
+                            element={
+                                <Photography
+                                    addProductsToLiked={addProductsToLiked}
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
                         ></Route>
-                        <Route path="/Culture" element={<Culture />}></Route>
-                        <Route path="/Liked" element={<Liked />}></Route>
+                        <Route
+                            path="/Culture"
+                            element={
+                                <Culture
+                                    addProductsToLiked={addProductsToLiked}
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
+                        ></Route>
+                        <Route
+                            path="/Liked"
+                            element={
+                                <Liked
+                                    productsInLiked={productsInLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                />
+                            }
+                        ></Route>
+                        <Route
+                            path="articles/:id"
+                            element={
+                                <ArticlePage
+                                    addProductsToLiked={addProductsToLiked}
+                                    removeProductFromCart={
+                                        removeProductFromCart
+                                    }
+                                    productsInLiked={productsInLiked}
+                                />
+                            }
+                        />
                     </Routes>
                 </div>
             </main>

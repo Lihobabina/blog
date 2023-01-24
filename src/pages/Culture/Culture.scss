@@ -13,14 +13,36 @@
             width: 48%;
             @include display-flex-between;
             flex-direction: column;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            
             .photo{
                 width: 100%;
                 height: 240px;
                 margin-bottom: 15px;
+                position: relative;
                 img{
                     width: 100%;
                     height: 100%;
                 }
+                .like, .liked{
+                    width: 50px;
+                    height: 35px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background: none;
+                    background-color: rgba($color: #fff, $alpha: 0.5);
+                    background-image: url(./assets/like.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 70%;
+                    border: none;
+                    border-radius: 20%;
+                    cursor: pointer;
+                   }
+                   .liked{
+                    background-image: url(./assets/liked.png);
+                   }
             }
             .content{
                 width: 100%;
@@ -30,8 +52,16 @@
                 flex-direction: column;
                 @include content;
                 @include author;
-                h1{
-                    text-align: center;
+                .navLink{
+                    color: #000;
+                    font-size: 17px;
+                font-style: normal;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: 'Jost',sans-serif;
+                text-decoration: none;
+                text-align: center;
+                margin-bottom: 10px;
                 }
                 p{
                     text-align: center;
@@ -74,21 +104,22 @@ display: flex;
             @include display-flex-center;
             flex-direction: column;
             align-items: flex-start;
-            p{
-@include description;
-margin-bottom: 10px;
-text-align: left;
-            }
-            a{
-                @include description;
-                color: #999999;
+            .navLink{
+                color: #000;
                 font-size: 12px;
-        font-style: normal;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-family: 'Jost',sans-serif;
-        text-decoration: none;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Jost',sans-serif;
+            text-decoration: none;
+            text-align: left;
+            margin-bottom: 10px;
             }
+           h3{
+            @include description;
+            color: #888;
+        font-size: 12px;       
+    text-transform: uppercase;    }
         }
       }
       button{
@@ -114,4 +145,3 @@ text-align: left;
     }
 
 }
-    

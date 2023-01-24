@@ -1,6 +1,8 @@
 import articlesArray from '../../utils/articlesArray'
 import './Photography.scss'
+import { Link } from 'react-router-dom'
 type ArticleProps = {
+    id: number
     img: string
     category: string
     desc: string
@@ -9,8 +11,20 @@ type ArticleProps = {
     text: string
     date: string
 }
-type Props = {}
-const Photography = (props: Props) => {
+type Props = {
+    addProductsToLiked: (id: number) => void
+    productsInLiked: productsInLiked
+    removeProductFromCart: (id: number) => void
+}
+type productsInLiked = {
+    [id: number]: boolean
+}
+
+const Photography = ({
+    addProductsToLiked,
+    removeProductFromCart,
+    productsInLiked,
+}: Props) => {
     return (
         <>
             <header>Photography</header>
@@ -22,6 +36,7 @@ const Photography = (props: Props) => {
                     )
                     .map(
                         ({
+                            id,
                             img,
                             category,
                             desc,
@@ -33,9 +48,31 @@ const Photography = (props: Props) => {
                             <div className="article">
                                 <div className="photo">
                                     <img src={img} alt="" />
+                                    <div>
+                                        {productsInLiked[id] ? (
+                                            <button
+                                                className="liked"
+                                                onClick={() =>
+                                                    removeProductFromCart(id)
+                                                }
+                                            ></button>
+                                        ) : (
+                                            <button
+                                                className="like"
+                                                onClick={() =>
+                                                    addProductsToLiked(id)
+                                                }
+                                            ></button>
+                                        )}
+                                    </div>
                                 </div>
                                 <div className="content">
-                                    <h1>{desc}</h1>
+                                    <Link
+                                        to={`/articles/${id}`}
+                                        className="navLink"
+                                    >
+                                        {desc}
+                                    </Link>
                                     <div className="desc">
                                         <h2>{date}</h2>
                                         <a href=".">{category}</a>

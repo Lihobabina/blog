@@ -1,6 +1,8 @@
 import articlesArray from '../../utils/articlesArray'
 import './Culture.scss'
+import { Link } from 'react-router-dom'
 type ArticleProps = {
+    id: number
     img: string
     category: string
     desc: string
@@ -10,8 +12,19 @@ type ArticleProps = {
     date: string
     popular?: string
 }
-type Props = {}
-const Culture = (props: Props) => {
+type Props = {
+    addProductsToLiked: (id: number) => void
+    productsInLiked: productsInLiked
+    removeProductFromCart: (id: number) => void
+}
+type productsInLiked = {
+    [id: number]: boolean
+}
+const Culture = ({
+    addProductsToLiked,
+    removeProductFromCart,
+    productsInLiked,
+}: Props) => {
     return (
         <>
             <header>Culture</header>
@@ -24,6 +37,7 @@ const Culture = (props: Props) => {
                         )
                         .map(
                             ({
+                                id,
                                 img,
                                 category,
                                 desc,
@@ -35,9 +49,33 @@ const Culture = (props: Props) => {
                                 <div className="article">
                                     <div className="photo">
                                         <img src={img} alt="" />
+                                        <div>
+                                            {productsInLiked[id] ? (
+                                                <button
+                                                    className="liked"
+                                                    onClick={() =>
+                                                        removeProductFromCart(
+                                                            id
+                                                        )
+                                                    }
+                                                ></button>
+                                            ) : (
+                                                <button
+                                                    className="like"
+                                                    onClick={() =>
+                                                        addProductsToLiked(id)
+                                                    }
+                                                ></button>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="content">
-                                        <h1>{desc}</h1>
+                                        <Link
+                                            to={`/articles/${id}`}
+                                            className="navLink"
+                                        >
+                                            {desc}
+                                        </Link>
                                         <div className="desc">
                                             <h2>{date}</h2>
                                             <a href=".">{category}</a>
@@ -63,14 +101,19 @@ const Culture = (props: Props) => {
                     <h1>Popular</h1>
                     {articlesArray
                         .filter(({ popular }: ArticleProps) => popular === '')
-                        .map(({ img, category, desc }: ArticleProps) => (
+                        .map(({ id, img, category, desc }: ArticleProps) => (
                             <div className="cont">
                                 <div className="photo">
                                     <img src={img} alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>{desc}</p>
-                                    <a href=".">{category}</a>
+                                    <Link
+                                        to={`/articles/${id}`}
+                                        className="navLink"
+                                    >
+                                        {desc}
+                                    </Link>
+                                    <h3>{category}</h3>
                                 </div>
                             </div>
                         ))}

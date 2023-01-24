@@ -1,8 +1,12 @@
 import './Menu.scss'
 import MenuItem from './MenuItem'
 
-type Props = {}
-const Menu = (props: Props) => {
+type Props = {
+    productsInLiked: {
+        [id: number]: boolean
+    }
+}
+const Menu = ({ productsInLiked }: Props) => {
     return (
         <>
             <nav>
@@ -11,7 +15,12 @@ const Menu = (props: Props) => {
                     <MenuItem to="/Destinations">Destinations</MenuItem>
                     <MenuItem to="/Photography">Photography</MenuItem>
                     <MenuItem to="/Culture">Culture</MenuItem>
-                    <MenuItem to="/Liked">Liked</MenuItem>
+                    <MenuItem to="/Liked">
+                        Liked
+                        <div className="liked-quantity-bl">
+                            {Object.keys(productsInLiked).length}
+                        </div>
+                    </MenuItem>
                 </ul>
             </nav>
         </>

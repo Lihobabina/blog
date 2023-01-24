@@ -1,6 +1,8 @@
 import articlesArray from '../../utils/articlesArray'
 import './Destinations.scss'
+import { Link } from 'react-router-dom'
 type ArticleProps = {
+    id: number
     img: string
     category: string
     desc: string
@@ -9,8 +11,20 @@ type ArticleProps = {
     text: string
     date: string
 }
-type Props = {}
-const Destinations = (props: Props) => {
+type Props = {
+    addProductsToLiked: (id: number) => void
+    productsInLiked: productsInLiked
+    removeProductFromCart: (id: number) => void
+}
+type productsInLiked = {
+    [id: number]: boolean
+}
+
+const Destinations = ({
+    addProductsToLiked,
+    productsInLiked,
+    removeProductFromCart,
+}: Props) => {
     return (
         <>
             <header>Destinations</header>
@@ -23,6 +37,7 @@ const Destinations = (props: Props) => {
                         )
                         .map(
                             ({
+                                id,
                                 img,
                                 category,
                                 desc,
@@ -34,9 +49,33 @@ const Destinations = (props: Props) => {
                                 <div className="article">
                                     <div className="photo">
                                         <img src={img} alt="" />
+                                        <div>
+                                            {productsInLiked[id] ? (
+                                                <button
+                                                    className="liked"
+                                                    onClick={() =>
+                                                        removeProductFromCart(
+                                                            id
+                                                        )
+                                                    }
+                                                ></button>
+                                            ) : (
+                                                <button
+                                                    className="like"
+                                                    onClick={() =>
+                                                        addProductsToLiked(id)
+                                                    }
+                                                ></button>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="content">
-                                        <h1>{desc}</h1>
+                                        <Link
+                                            to={`/articles/${id}`}
+                                            className="navLink"
+                                        >
+                                            {desc}
+                                        </Link>
                                         <div className="desc">
                                             <h2>{date}</h2>
                                             <a href=".">{category}</a>
